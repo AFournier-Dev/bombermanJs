@@ -25,16 +25,16 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     width: 25px;
     background-color: #222f3e;
     position: absolute;
-    transform: translate(50%, 50%);
+    transform: translate(-50%, -50%);
+    top : 25px;
+    left :
 
 }
 
 .bomb {
     
     animation-duration: 3000ms;
-    animation-name: growupGrowDown;
-    
-    
+    animation-name: growupGrowDown;     
     transform: translate(-50%, -50%);
     
 } 
