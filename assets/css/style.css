@@ -6,7 +6,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #playground{
     height: 800px;
     width: 1400px;
-    background-color: #576574;
+    background-color: #5f27cd;
     position: relative;
 }
 
@@ -27,10 +27,21 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     position: absolute;
     transform: translate(-50%, -50%);
     top : 25px;
-    left :
+    left : 25px;
 
 }
+/*
+#bot2{
+    height: 25px;
+    width: 25px;
+    background-color: #222f3e;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top : 25px;
+    left : 25px;
 
+}
+*/
 .bomb {
     
     animation-duration: 3000ms;
