@@ -63,6 +63,7 @@ function deplacement(element, whatMove) {
         default:
             break;
     }
+    touche();
 }
 
 // FONCTION CREATION DE LA BOMBE
@@ -123,7 +124,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// generer le mouvement aléatoire de mon bot1 ==> DEPENDANCE valueOfStyle
+// generer le mouvement aléatoire de mon bot ==> DEPENDANCE valueOfStyle
 setInterval(() => {
     parametreBot.forEach(bot => {
         let top = parseInt(window.getComputedStyle(bot).getPropertyValue('top'));
@@ -147,51 +148,11 @@ setInterval(() => {
                 break;
         }
     });
-}, 250);
-
-/*FONCTION DE COLLISION BOMBE & ELEMENRT PLATEAU DEPENDANCE ==> valueOfStyle*/
-function crash(element) {
-    let topPlayer1= valueOfStyle(player1, "top");
-    let leftPlayer1 = valueOfStyle(player1, "left");;
-    parametreBot.forEach(bot => {
-        let top = valueOfStyle(bot, "top");
-        let left = valueOfStyle(bot, "left");
-        if (top === topPlayer1 && left === leftPlayer1) {
-            return('CONTACT');
-            console.log("CONTACT");
-        }
-    })
-    //const parametreBot = [];
-
-}
+},500);
 
 
-
-/*
-function touche() {
-    positionLeftBot = valueOfStyle(bot, "left");
-    positionLeftPlayer1 = valueOfStyle(player1, "left");
-    positionTopBot = valueOfStyle(bot, "left");
-    positionTopPlayer1 = valueOfStyle(player1, "left");
-    if (positionLeftBot === positionLeftPlayer1 && positionTopBot === positionTopPlayer1){
-        return "toucher couler in the player face"
-    }
-
-    touche(console.log("toucher couler in the player face"))
-*/
-
-/*
-function touche(topBot, leftBot) {
-    if (parseInt(window.getComputedStyle(player1).getPropertyValue('top')) === parseInt(window.getComputedStyle(bot).getPropertyValue('top')) && parseInt(window.getComputedStyle(player1).getPropertyValue('left')) === parseInt(window.getComputedStyle(bot).getPropertyValue('left'))){
-        console.log("joueurtoucher");
-
-
-    }
-}
-*/
-
-// Fonction explosion BOMB DEPENDANCE ==> valueOfStyle
-function colisionBomb(topBomb, leftBomb) {
+// Fonction explosion BOMB  DEPENDANCE ==> valueOfStyle
+function colision(topBomb, leftBomb) {
     if (valueOfStyle(player1, "top") <= topBomb + 37.5 && valueOfStyle(player1, "top") >= topBomb - 37.5 && valueOfStyle(player1, "left") <= leftBomb + 37.5 && valueOfStyle(player1, "left") >= leftBomb - 37.5) {
         console.log("joueurtoucher");
         life = life - 1;
@@ -204,10 +165,24 @@ function colisionBomb(topBomb, leftBomb) {
     parametreBot.forEach(bot => {
         if (valueOfStyle(bot, "top") <= topBomb + 37.5 && valueOfStyle(bot, "top") >= topBomb - 37.5 && valueOfStyle(bot, "left") <= leftBomb + 37.5 && valueOfStyle(bot, "left") >= leftBomb - 37.5) {
             console.log("bottouch");
+            //////////////////////////////////////////////////////////////////////
             playground.removeChild(bot);
         }
     });
    
 }
 
-
+// Fonction collision Bot Vs Player1  DEPENDANCE ==> valueOfStyle
+function touche() {
+    parametreBot.forEach(bot => {
+        if (valueOfStyle(bot, "top") === valueOfStyle(player1, "top") && valueOfStyle(bot, "left") === valueOfStyle(player1, "left")) {
+            console.log("joueurtoucher");
+            life = life - 1;
+                 console.log(life);
+            if (life <= 0) {
+                console.log("YOU LOOSE");
+                playground.removeChild(player1); 
+        }
+    }})
+    
+}

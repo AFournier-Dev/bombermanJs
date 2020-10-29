@@ -6,26 +6,37 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #playground{
     height: 800px;
     width: 1400px;
-    background-color: #5f27cd;
+    background-color: #c9bce2;
     position: relative;
 }
 
 #player1{
-    height: 25px;
-    width: 25px;
-    background-color: #ff9f43;
+    height: 50px;
+    width: 50px;
+  /*  background-color: #ff9f43; */ 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-image: url("../pictures/citrouillePersonnage.png");
+    background-repeat: no-repeat;
+    
+    background-position-y: center;
+    background-size: 100%; 
+    
 }
 
 .bot{
-    height: 25px;
-    width: 25px;
-    background-color: #222f3e;
+    height: 50px;
+    width: 50px;
+ /* background-color: #222f3e; */
     position: absolute;
     transform: translate(-50%, -50%);
+    background-image: url("../pictures/chauveSouris1.png");
+    background-repeat: no-repeat;
+    
+    background-position-y:  center;
+    background-size : 100%; 
     
 
 }
@@ -34,15 +45,20 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     animation-duration: 3000ms;
     animation-name: growupGrowDown;     
     transform: translate(-50%, -50%);
+    background-image: url("../pictures/bonbonBomb.png");
+    background-repeat: no-repeat;
+    
+    background-position-y: center;
+    background-size: 100%; 
     
 } 
 @keyframes growupGrowDown {
-    0% {width: 25px; height: 25px;}
-    20% {width: 20px; height: 20px;}
-    40% {width: 25px; height: 25px;}
-    60% {width: 20px; height: 20px;}
-    80% {width: 25px; height: 25px;}
-    90% {width: 20px; height: 20px;}
+    0% {width: 50px; height: 50px;}
+    20% {width: 40px; height: 40px;}
+    40% {width: 50px; height: 50px;}
+    60% {width: 40px; height: 40px;}
+    80% {width: 50px; height: 50px;}
+    90% {width: 40px; height: 40px;}
     95% {width: 0px; height: 0px;}
-    100% {width: 75px; height: 75px;}
+    100% {width: 125px; height: 125px;}
 }
