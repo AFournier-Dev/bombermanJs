@@ -1,11 +1,12 @@
+// Valeurs d'initialisation
 let life = 3;
-
 const player1 = document.getElementById("player1");
 const playground = document.getElementById("playground");
 const bot = document.getElementById("bot");
 const nbBot = 4;
 const parametreBot = [];
 
+// Generation des Bot dans le tableau et positions de départ
 for (let i = 0; i < nbBot; i++) {
     let positionBOT = [[25, 1375, 1375, 25], [25, 775, 25, 775]];
 
@@ -21,9 +22,6 @@ for (let i = 0; i < nbBot; i++) {
     parametreBot.push(ennemie);
     console.log(parametreBot);
 }
-
-
-
 
 //fonction pour récupérer plus rapidement les valeurs calculées des propriétés CSS des éléments !!!! ==> TOUTES LES DEPENDANCES VIENNENT D ICI
 function valueOfStyle(element, property) {
@@ -84,8 +82,8 @@ function bombOnPlayground(element) {
     bomb.style.width = "25px";
     bomb.style.height = "25px";
     bomb.style.transformOrigin = "center";
-    bomb.style.backgroundColor = '#00d2d3';
-    bomb.style.borderRadius = '50%';
+   // bomb.style.backgroundColor = '#00d2d3';
+   // bomb.style.borderRadius = '50%';
 
     setTimeout(() => {
         let parent = document.getElementById(playground);
@@ -183,6 +181,6 @@ function touche() {
                 console.log("YOU LOOSE");
                 playground.removeChild(player1); 
         }
-    }})
-    
+    }})    
 }
+

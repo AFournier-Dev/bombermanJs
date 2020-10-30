@@ -9,7 +9,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     background-color: #c9bce2;
     position: relative;
 }
-
 #player1{
     height: 50px;
     width: 50px;
@@ -20,12 +19,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     transform: translate(-50%, -50%);
     background-image: url("../pictures/citrouillePersonnage.png");
     background-repeat: no-repeat;
-    
-    background-position-y: center;
     background-size: 100%; 
     
 }
-
 .bot{
     height: 50px;
     width: 50px;
@@ -34,14 +30,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     transform: translate(-50%, -50%);
     background-image: url("../pictures/chauveSouris1.png");
     background-repeat: no-repeat;
-    
-    background-position-y:  center;
     background-size : 100%; 
     
 
 }
-.bomb {
-    
+.bomb {    
     animation-duration: 3000ms;
     animation-name: growupGrowDown;     
     transform: translate(-50%, -50%);
