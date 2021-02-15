@@ -31,9 +31,18 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     background-image: url("../pictures/chauveSouris1.png");
     background-repeat: no-repeat;
     background-size : 100%; 
-    
-
 }
+.wall{
+    height: 50px;
+    width: 50px;
+ /* background-color: #222f3e; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-image: url("../pictures/mursC.jpg");
+    background-repeat: no-repeat;
+    background-size : 100%; 
+}
+
 .bomb {    
     animation-duration: 3000ms;
     animation-name: growupGrowDown;     

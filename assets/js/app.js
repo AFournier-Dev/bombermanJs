@@ -3,8 +3,11 @@ let life = 3;
 const player1 = document.getElementById("player1");
 const playground = document.getElementById("playground");
 const bot = document.getElementById("bot");
-const nbBot = 4;
+const wall = document.getElementById("wall");
+const nbBot = 16;
+const nbMur = 10;
 const parametreBot = [];
+const parametreWall = [];
 
 // Generation des Bot dans le tableau et positions de départ
 for (let i = 0; i < nbBot; i++) {
@@ -146,7 +149,7 @@ setInterval(() => {
                 break;
         }
     });
-},500);
+},400);
 
 
 // Fonction explosion BOMB  DEPENDANCE ==> valueOfStyle
@@ -183,4 +186,92 @@ function touche() {
         }
     }})    
 }
+/*
+// creer des murs fixes
+//creer une variable nombre de mur
+// creer un tableau double position X Y
 
+
+for (let i = 0; i < nbMur; i++) {
+    let leChiffreX = Math.round(Math.random()*1400/25)*25;
+    let leChiffreY = Math.round(Math.random()*800/25)*25;
+    console.log(leChiffreX, tableau.includes(leChiffre));
+    console.log(leChiffreY, tableau.includes(leChiffre));
+let positionWall = [[],[]];
+let wall = document.createElement("div");
+wall.classList.add("wall");
+playground.appendChild(wall);
+
+
+    /*
+    let positionBOT = [[25, 1375, 1375, 25], [25, 775, 25, 775]];
+
+
+    let ennemie = document.createElement("div");
+    ennemie.classList.add("bot");
+
+    ennemie.style.top = positionBOT[1][i] + 'px';
+    ennemie.style.left = positionBOT[0][i] + 'px';
+
+    playground.appendChild(ennemie);
+
+    parametreBot.push(ennemie);
+    console.log(parametreBot);
+
+
+
+for (let index = 1; index <= 5; index++) {
+        let leChiffre = Math.round(Math.random()*800/50)*50;
+
+        console.log(leChiffre, tableau.includes(leChiffre))
+        
+        while ((leChiffre >= 350 && leChiffre <=450) || tableau.includes(leChiffre)) {
+            leChiffre = Math.round(Math.random()*800/50)*50; 
+            console.log(leChiffre);            
+        }        
+        tableau.push(leChiffre);  
+    }    
+}
+
+
+
+// Creer des murs destructibles
+/*
+for (let i = 0; i < nbMur; i++) {
+    let laPositionX = Math.round(Math.random()*1400/25)*25;
+    let laPositionY = Math.round(Math.random()*800/25)*25;
+    console.log(laPositionX, tableau.includes(laPositionX));
+    console.log(laPositionY, tableau.includes(laPositionY));
+    while ((leChiffre >= 350 && leChiffre <=450) || tableau.includes(leChiffre)) {
+        leChiffre = Math.round(Math.random()*800/50)*50; 
+        console.log(leChiffre);            
+    }        
+    tableau.push(leChiffre); 
+    
+
+
+    let ennemie = document.createElement("div");
+    ennemie.classList.add("bot");
+
+    ennemie.style.top = positionBOT[1][i] + 'px';
+    ennemie.style.left = positionBOT[0][i] + 'px';
+
+    playground.appendChild(ennemie);
+
+    parametreBot.push(ennemie);
+    console.log(parametreBot);
+}
+
+
+
+function lAlgoDansLaFonction() {
+    for (let index = 1; index <= 5; index++) {
+        let leChiffre = Math.round(Math.random()*800/50)*50;
+
+        console.log(leChiffre, tableau.includes(leChiffre))
+        
+        
+    }    
+}
+lAlgoDansLaFonction();
+*/
