@@ -4,14 +4,14 @@ const player1 = document.getElementById("player1");
 const playground = document.getElementById("playground");
 const bot = document.getElementById("bot");
 const wall = document.getElementById("wall");
-const nbBot = 16;
+const nbBot = 4;
 const nbMur = 10;
 const parametreBot = [];
 const parametreWall = [];
 
 // Generation des Bot dans le tableau et positions de départ
 for (let i = 0; i < nbBot; i++) {
-    let positionBOT = [[25, 1375, 1375, 25], [25, 775, 25, 775]];
+    let positionBOT = [[25, 1375, 1375, 25], [25, 725, 25, 725]];
 
 
     let ennemie = document.createElement("div");
@@ -43,7 +43,7 @@ function deplacement(element, whatMove) {
             }
             break;
         case "down":
-            if (top < 775) {
+            if (top < 725) {
                 top += 25;
                 element.style.top = top + 'px';
             }
@@ -204,7 +204,7 @@ playground.appendChild(wall);
 
 
     /*
-    let positionBOT = [[25, 1375, 1375, 25], [25, 775, 25, 775]];
+    let positionBOT = [[25, 1375, 1375, 25], [25, 725, 25, 725]];
 
 
     let ennemie = document.createElement("div");
